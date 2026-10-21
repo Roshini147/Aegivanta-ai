@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  /* Default: Dark Theme (Deep Blue, Black & White) */
+  --bg-app: #070B14;
+  --bg-sidebar: #091122;
+  --bg-header: #080F1E;
+  --card-bg: #0D172E;
+  --card-inner: #0A1224;
+  --card-border: #1A2D52;
+  --border-subtle: #16274A;
+  --text-main: #FFFFFF;
+  --text-sub: #94A3B8;
+  --text-dim: #64748B;
+  --accent-blue: #06B6D4;
+  --accent-navy: #1E3E62;
+  --accent-emerald: #10B981;
+}
+
+html.light {
+  /* Light Theme: Crisp White, Deep Blue & Black */
+  --bg-app: #F4F7FC;
+  --bg-sidebar: #0B192C;
+  --bg-header: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --card-inner: #F8FAFC;
+  --card-border: #CBD5E1;
+  --border-subtle: #E2E8F0;
+  --text-main: #091124;
+  --text-sub: #334155;
+  --text-dim: #64748B;
+  --accent-blue: #0284C7;
+  --accent-navy: #1E3A8A;
+  --accent-emerald: #059669;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
+
+/* Print Styles for Final Safety Report */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
